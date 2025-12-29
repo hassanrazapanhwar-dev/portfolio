@@ -29,6 +29,10 @@ body {
     background-color: var(--base-color);
 }
 
+a {
+    text-decoration: none;
+}
+
 header .go-back-link {
     position: fixed;
     top: 50%;

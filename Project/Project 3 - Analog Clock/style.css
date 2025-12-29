@@ -11,6 +11,11 @@
     /* transition: 500ms; */
 }
 
+a {
+    text-decoration: none;
+}
+
+
 body {
     display: flex;
     flex-direction: column;
