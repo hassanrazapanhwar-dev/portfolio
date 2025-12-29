@@ -1,0 +1,353 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* animation: loader 1s ease alternate; */
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: crimson;
+}
+
+body {
+    font-family: "poppins";
+    background-color: rgb(37, 37, 37);
+    color: crimson;
+    scroll-behavior: smooth;
+    user-select: none;
+    transition: .5s ease;
+    /* animation: loader 1s ease alternate; */
+}
+
+
+/*              -----   Navbar Section  -----                */
+
+
+.navbar {
+    /* width: 100vw; */
+    /* border: 1px solid red; */
+}
+
+.navbar .nav_ul {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0px 50px;
+    font-size: 1.5rem;
+}
+
+.navbar .nav_ul .nav_logo {
+    font-family: "Rougbelt";
+    letter-spacing: 1px;
+    position: relative;
+    margin-right: auto;
+}
+
+.navbar .nav_ul .nav_logo::after {
+    content: "";
+    position: absolute;
+    width: 10%;
+    height: 20%;
+    border-radius: 50%;
+    background-color: crimson;
+    bottom: .5rem;
+    right: -1rem;
+}
+
+.navbar .nav_ul .nav_logo::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: crimson;
+    border-radius: 150px;
+    bottom: -5px;
+    left: 0px;
+    transition: .5s ease;
+}
+
+.navbar .nav_ul .nav_logo:hover::before {
+    width: 100%;
+}
+
+.bigDevice {
+    display: flex;
+}
+
+.bar {
+    cursor: pointer;
+    position: relative;
+    top: -300px;
+    font-size: 1rem;
+    transition: .5s ease;
+}
+
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.hamburger {
+    font-family: "poppins";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(30, 30, 30);
+    padding: 50px 50px;
+    border-radius: 10px;
+    transition: .5s ease;
+    position: absolute;
+    right: 50px;
+    top: -300px;
+    /* top:50px; */
+    z-index: 100;
+    animation: hamburger 1s ease alternate;
+}
+
+.bigDevice li {
+    color: crimson;
+    /* border:1px solid red; */
+    /* padding:10px; */
+    margin: 0px 10px;
+    position: relative;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.hamburger li a {
+    color: crimson;
+    /* border:1px solid red; */
+    /* padding:10px; */
+    margin: 0px 10px;
+    position: relative;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.hamburger li a:after,
+.bigDevice li a:after {
+    content: "";
+    width: 0%;
+    height: 5%;
+    border-radius: 15%;
+    background-color: crimson;
+    position: absolute;
+    bottom: -3px;
+    left: 0px;
+    transition: .5s ease;
+}
+
+.hamburger li a:hover::after,
+.bigDevice li a:hover::after {
+    width: 100%;
+}
+
+.hamburger li a i {
+    color: crimson;
+    margin-right: 5px;
+}
+
+/*              <-----|| Hero Section ||----->               */
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    transition: .5s ease;
+    margin-top: 60px;
+}
+
+.circle {
+    position: relative;
+    border: 2px solid crimson;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+}
+
+.circle::after {
+    content: 'Services';
+    color: #212121;
+    display: grid;
+    place-content: center;
+    font-weight: 500;
+    text-transform: uppercase;
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: crimson;
+}
+
+
+.hero .circle .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #232323;
+    padding: 30px;
+    text-align: center;
+    transition: .5s ease;
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    transform-origin: bottom;
+}
+
+.hero .circle .box:nth-child(1) {
+    top: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0px;
+}
+
+.hero .circle .box:nth-child(2) {
+    top: 50%;
+    left: -30%;
+    transform: translateY(-50%);
+    padding: 0px;
+}
+
+.hero .circle .box:nth-child(3) {
+    top: 50%;
+    left: 75%;
+    transform: translateY(-50%);
+}
+
+.hero .circle .box:nth-child(4) {
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hero h2 {
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: .9rem;
+}
+
+.hero h4 {
+    padding: 0px 30px;
+    color: #fff;
+    font-size: .7rem;
+    font-family: 'Consolas';
+    letter-spacing: 2px;
+}
+
+@media screen and (max-width:600px) {
+
+    .navbar .nav_ul {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0px 10px;
+        font-size: 1.5rem;
+    }
+
+    .bar {
+        top: 0px;
+    }
+
+    .bigDevice {
+        display: none;
+    }
+
+    .hamburger {
+        right: 0px;
+    }
+
+    .hamburger li a {
+        color: crimson;
+        margin: 0px;
+        position: relative;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .hero {
+        margin-top: 10px;
+    }
+
+
+    .circle {
+        border: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0;
+        height: auto;
+        width: auto;
+        margin-top: 50px;
+    }
+
+    .circle::after {
+        display: none;
+    }
+
+    .hero .circle .box {
+        position: static;
+        border-radius: 5px;
+        margin: 10px;
+        width: 250px;
+    }
+
+    .hero .circle .box h2 {
+        font-size: 1rem;
+    }
+
+    .hero .circle .box h4 {
+        font-size: .7rem;
+    }
+
+
+    .hero .circle .box:nth-child(1) {
+        transform: translateX(0)
+    }
+
+    .hero .circle .box:nth-child(2) {
+        transform: translateY(0)
+    }
+
+    .hero .circle .box:nth-child(3) {
+        transform: translateX(0)
+    }
+
+    .hero .circle .box:nth-child(4) {
+        transform: translateY(0)
+    }
+
+}
+
+@keyframes hamburger {
+    0% {
+        top: -600px;
+    }
+
+    100% {
+        top: -300px;
+    }
+}
