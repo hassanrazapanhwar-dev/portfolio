@@ -1,0 +1,493 @@
+<!-- All rights reserved by Team Hassan Raza -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelia - Explore The World</title>
+    <meta name="title" content="Travelia - Explore the world">
+    <meta name="description" content="This is a travel Website Created By Dev Hassan Raza">
+
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/x-icon">
+
+    <!-- Font Awesome Icons Link -->
+    <link rel="stylesheet" href="./assets/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-- Google Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italianno&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rouge+Script&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom Css Link -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!--
+        - Preload Images
+    -->
+    <link rel="preload" href="./assets/images/hero-banner.png" alt="image">
+    <link rel="preload" href="./assets/images/preloader.svg" alt="image">
+
+
+</head>
+
+<body>
+
+
+    
+    <div class="preloader" data-preloader>
+        <div class="preloader-inner">
+            <img src="./assets/images/preloader.svg" width="50" height="50" alt="" class="img">
+        </div>
+    </div>
+
+
+        <header class="header" data-header>
+        <div class="container">
+
+            <a href="#" class="logo">
+                <img src="./assets/images/logo.svg" width="187" height="38" alt="Logo">
+            </a>
+
+            <nav class="navbar" data-navbar>
+
+                <div class="navbar-top">
+                    <a href="#" class="logo">
+                        <img src="./assets/images/logo.svg" width="187" height="38" alt="Logo">
+                    </a>
+
+                    <button class="nav-toggle-btn" aria-label="close menu" data-nav-toggler>
+                        <i class="fa fa-close"></i>
+                    </button>
+
+                </div>
+
+                <ul class="navbar-list">
+
+                    <li class="navbar-item">
+                        <a href="./index.html" class="navbar-link">Home</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#services" class="navbar-link">Services</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./destinations.html" class="navbar-link active">Destinations</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#experience" class="navbar-link">About</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#footer" class="navbar-link">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="header-action">
+                    <a href="#" class="login-btn">Login</a>
+
+                    <a href="#" class="btn btn-primary">Sign Up</a>
+                </div>
+
+            </nav>
+
+            <button class="nav-toggle-btn" aria-label="open menu" data-nav-toggler>
+                <i class="fa fa-bars"></i>
+            </button>
+
+            <div class="overlay" data-overlay data-nav-toggler></div>
+
+        </div>
+    </header>
+
+
+         <!-- 
+                - #DESTINATION
+            -->
+
+            <section class="section desti destitab" id="destinations" aria-label="destination">
+                <div class="container">
+
+                    <p class="section-subtitle">Top Destination</p>
+
+                    <h2 class="h2 title section-title">Explore Top Destination</h2>
+
+                    <ul class="desti-list">
+
+                        <li>
+                            <div class="desti-card">
+                                <div class="card-banner img-holder" style="--width:600 ; --height: 650;">
+                                    <img src="./assets/images/destination-1.jpg" width="600" height="650" loading="lazy"
+                                        alt="Enjoy the Beauty of the del Pincio" class="img-cover">
+
+                                    <span class="card-price">$340</span>
+                                </div>
+
+                                <div class="card-content">
+                                    <h3 class="h3 title">
+                                        <a href="#" class="card-title">
+                                            Enjoy the Beauty of the del Pincio
+                                        </a>
+                                    </h3>
+                                    <address class="card-text">
+                                        Rome, Italy
+                                    </address>
+                                    <div class="card-rating">
+                                        <span class="span">
+                                            <i class="fa fa-star"></i>
+
+                                            4.7
+                                        </span>
+
+                                        <p class="rating-text">(11.1k Review)</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="desti-card">
+                                <div class="card-banner img-holder" style="--width:600 ; --height: 650;">
+                                    <img src="./assets/images/destination-2.jpg" width="600" height="650" loading="lazy"
+                                        alt="Enjoy the Beauty of the Pakistan Monument" class="img-cover">
+
+                                    <span class="card-price">$340</span>
+                                </div>
+
+                                <div class="card-content">
+                                    <h3 class="h3 title">
+                                        <a href="#" class="card-title">
+                                            Enjoy the Beauty of the Pakistan Monument
+                                        </a>
+                                    </h3>
+                                    <address class="card-text">
+                                        Islamabad, Pakistan
+                                    </address>
+                                    <div class="card-rating">
+                                        <span class="span">
+                                            <i class="fa fa-star"></i>
+
+                                            4.9
+                                        </span>
+
+                                        <p class="rating-text">(87.9k Review)</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="desti-card">
+                                <div class="card-banner img-holder" style="--width:600 ; --height: 650;">
+                                    <img src="./assets/images/destination-3.jpg" width="600" height="650" loading="lazy"
+                                        alt="Enjoy the Beauty of the Burj Khalifa" class="img-cover">
+
+                                    <span class="card-price">$340</span>
+                                </div>
+
+                                <div class="card-content">
+                                    <h3 class="h3 title">
+                                        <a href="#" class="card-title">
+                                            Enjoy the Beauty of the Burj Khalifa
+                                        </a>
+                                    </h3>
+                                    <address class="card-text">
+                                        Skyscraper in Dubai
+                                    </address>
+                                    <div class="card-rating">
+                                        <span class="span">
+                                            <i class="fa fa-star"></i>
+
+                                            4.7
+                                        </span>
+
+                                        <p class="rating-text">(120k Review)</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="desti-card">
+                                <div class="card-banner img-holder" style="--width:600 ; --height: 650;">
+                                    <img src="./assets/images/destination-4.jpg" width="600" height="650" loading="lazy"
+                                        alt="Enjoy the Beauty of the Milaidhoo" class="img-cover">
+
+                                    <span class="card-price">$340</span>
+                                </div>
+
+                                <div class="card-content">
+                                    <h3 class="h3 title">
+                                        <a href="#" class="card-title">
+                                            Enjoy the Beauty of the Milaidhoo
+                                        </a>
+                                    </h3>
+                                    <address class="card-text">
+                                        Island in the Maldives
+                                    </address>
+                                    <div class="card-rating">
+                                        <span class="span">
+                                            <i class="fa fa-star"></i>
+
+                                            4.7
+                                        </span>
+
+                                        <p class="rating-text">(70 Review)</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="desti-card">
+                                <div class="card-banner img-holder" style="--width:600 ; --height: 650;">
+                                    <img src="./assets/images/destination-5.jpg" width="600" height="650" loading="lazy"
+                                        alt="Enjoy the Beauty of the Ko Tao" class="img-cover">
+
+                                    <span class="card-price">$340</span>
+                                </div>
+
+                                <div class="card-content">
+                                    <h3 class="h3 title">
+                                        <a href="#" class="card-title">
+                                            Enjoy the Beauty of the Ko Tao
+                                        </a>
+                                    </h3>
+                                    <address class="card-text">
+                                        Island in the Gulf of Thailand
+                                    </address>
+                                    <div class="card-rating">
+                                        <span class="span">
+                                            <i class="fa fa-star"></i>
+
+                                            4.5
+                                        </span>
+
+                                        <p class="rating-text">(985 Review)</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="desti-card">
+                                <div class="card-banner img-holder" style="--width:600 ; --height: 650;">
+                                    <img src="./assets/images/destination-6.jpg" width="600" height="650" loading="lazy"
+                                        alt="Enjoy the Beauty of the Grand Mecidiye Mosque" class="img-cover">
+
+                                    <span class="card-price">$340</span>
+                                </div>
+
+                                <div class="card-content">
+                                    <h3 class="h3 title">
+                                        <a href="#" class="card-title">
+                                            Enjoy the Beauty of the Grand Mecidiye Mosque
+                                        </a>
+                                    </h3>
+                                    <address class="card-text">
+                                        Mosque in Istanbul, Türkiye
+                                    </address>
+                                    <div class="card-rating">
+                                        <span class="span">
+                                            <i class="fa fa-star"></i>
+
+                                            4.8
+                                        </span>
+
+                                        <p class="rating-text">(29.6k Review)</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </section>
+
+
+
+
+                        <!-- 
+                - #FOOTER
+            -->
+            <footer class="footer" id="footer">
+                <div class="container">
+
+                    <div class="footer-top">
+
+                        <div class="footer-brand">
+
+                            <a href="" class="logo">
+                                <img src="./assets/images/logo.svg" width="187" height="38" alt="logo">
+                            </a>
+
+                            <p class="footer-text">
+                                We always make our customer
+                                happy by providing as many
+                                choices as possible
+                            </p>
+
+                            <ul class="social-list">
+
+                                <li>
+                                    <a href="#" class="social-link">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="social-link">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="social-link">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                        <ul class="footer-list">
+
+                            <li>
+                                <p class="footer-list-title">About</p>
+                            </li>
+
+                            <li>
+                                <p class="footer-link">About Us</p>
+                            </li>
+
+                            <li>
+                                <p class="footer-link">Features</p>
+                            </li>
+
+                            <li>
+                                <p class="footer-link">News</p>
+                            </li>
+
+                            <li>
+                                <p class="footer-link">Menu</p>
+                            </li>
+
+                        </ul>
+
+                        <ul class="footer-list">
+
+                            <li>
+                                <p class="footer-list-title">Company</p>
+                            </li>
+
+                            <li>
+                                <p class="footer-link">Why Company</p>
+                            </li>
+
+                            <li>
+                                <p class="footer-link">Partner With Us</p>
+                            </li>
+
+                            <li>
+                                <p class="footer-link">FAQ</p>
+                            </li>
+
+                            <li>
+                                <p class="footer-link">Blog</p>
+                            </li>
+
+                        </ul>
+
+                        <ul class="footer-list">
+
+                            <li>
+                                <p class="footer-list-title">Support</p>
+                            </li>
+
+                            <li>
+                                <p class="footer-link">Account</p>
+                            </li>
+
+                            <li>
+                                <p class="footer-link">Support Center</p>
+                            </li>
+
+                            <li>
+                                <p class="footer-link">Feedback</p>
+                            </li>
+
+                            <li>
+                                <p class="footer-link">Contact Us</p>
+                            </li>
+
+                            <li>
+                                <p class="footer-link">Accessibility</p>
+                            </li>
+
+                        </ul>
+
+                        <div class="footer-list">
+                            <p class="footer-list-title">Get In Touch</p>
+
+                            <p class="footer-text">
+                                Question or feedback? We’d love to hear from you.
+                            </p>
+
+                            <form action="" class="input-wrapper">
+                                <input type="email" name="email-address" placeholder="Email Address" autocomplete="off"
+                                    required class="input-field">
+
+                                <button type="submit" class="input-btn" aria-label="send a message">
+                                    <i class="fa fa-paper-plane" aria-label="true"></i>
+                                </button>
+                            </form>
+
+                        </div>
+
+                    </div>
+
+                    <div class="footer-bottom">
+
+                        <p class="copyright">Copyright 2026. Made by <a href="#" class="copyright-link">Team Hassan
+                                Raza</a></p>
+
+                        <ul class="footer-bottom-list">
+
+                            <li>
+                                <a href="#" class="footer-bottom-link">Terms and Condition</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="footer-bottom-link">Privacy and Policy</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+            </footer>
+
+
+    </body>
+<!-- Custom Script -->
+<script src="./assets/js/script.js"></script>
+
+<!-- ionicon Link -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</html>
