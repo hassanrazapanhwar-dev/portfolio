@@ -1,0 +1,230 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-light-pink: #ece8e8;
+    --bg-light-purple: #c6b4e7fb;
+    --text-dim-black: #3d3c3c;
+    --text-black: #212121;
+    --text-white: #f1f1f1;
+
+
+
+    --transition-1: 250ms;
+    --transition-2: 500ms;
+}
+
+body {
+    background-color: var(--bg-light-pink);
+    color: var(--text-dim-black);
+    font-size: 10px;
+    font-family: "poppins", "sans-serif";
+    height: 100vh;
+}
+
+.game-content .heading {
+    font-size: 1rem;
+    color: var(--text-white);
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background-color: var(--bg-light-purple);
+}
+
+.game-content div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-block: 30px 50px;
+    width: 100%;
+    gap: 5px;
+}
+
+.game-content .sub-title {
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    margin-block: 10px;
+}
+
+.game-content .win-image {
+    transition: var(--transition-1);
+    width: 0;
+}
+
+.game-content .reset {
+    padding: 5px 20px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: var(--transition-1);
+    outline: none;
+    border: 1px solid var(--bg-light-purple);
+    border-radius: 5px;
+    color: var(--text-dim-black);
+    font-family: 'poppins', 'sans-serif';
+}
+
+.game-content .reset:is(:hover, :focus-visible) {
+    background-color: var(--bg-light-purple);
+    color: var(--bg-light-pink);
+}
+
+.game-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+    gap: 20px;
+    position: relative;
+    padding: 20px;
+}
+
+.game-container .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.container .box {
+    width: 20vw;
+    height: 20vw;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--bg-light-purple);
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: var(--transition-1);
+    overflow: hidden;
+}
+
+.box:nth-child(1) {
+    border-top-color: transparent;
+    border-left-color: transparent;
+}
+
+.box:nth-child(2) {
+    border-top-color: transparent;
+}
+
+.box:nth-child(3) {
+    border-top-color: transparent;
+    border-right-color: transparent;
+}
+
+.box:nth-child(4) {
+    border-left-color: transparent;
+}
+
+.box:nth-child(6) {
+    border-right-color: transparent;
+}
+
+.box:nth-child(7) {
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.box:nth-child(8) {
+    border-bottom-color: transparent;
+}
+
+.box:nth-child(9) {
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.container .box:is(:hover, :focus-visible) {
+    background-color: var(--bg-light-purple);
+}
+
+.copyright {
+    margin-block-start: 50px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+@media screen and (min-width: 700px) {
+
+    .game-content .heading {
+        font-size: 2rem;
+    }
+
+    .game-content .sub-title {
+        font-size: 3rem;
+    }
+
+    .game-content div {
+        margin-block: 50px 0px;
+    }
+
+    .game-content .reset {
+        padding: 10px 30px;
+        font-size: 1.5rem;
+    }
+
+}
+
+@media screen and (min-width: 1000px) {
+
+    .game-container {
+        flex-direction: row;
+        gap: 50px;
+    }
+
+    .game-container .container {
+        margin-block-start: 80px;
+    }
+
+    .container .box {
+        width: 10vw;
+        height: 10vw;
+    }
+    
+    .container .box {
+        font-size: 6rem;
+    }
+
+
+    .game-content .heading {
+        font-size: 2rem;
+    }
+
+    .game-content .sub-title {
+        font-size: 3rem;
+    }
+
+    .game-content div {
+        flex-direction: column;
+        gap: 10px;    
+    }
+
+
+    .game-content .reset {
+        padding: 10px 30px;
+        font-size: 1.5rem;
+    }
+
+
+}
+
+@media screen and (min-width: 1400px) {
+    .game-content div {
+        margin-block: 150px 20px;
+    }
+
+    .container .box {
+        font-size: 10rem;
+    }
+
+}
