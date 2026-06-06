@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ramadan pen</title>
-  <!-- ***Ramadan Pen Writing Hand By Hassan Raza*** -->
+  <title>Hologram | Hassan Raza</title>
+  <meta>
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
@@ -27,12 +27,12 @@
     var sy = null;
 
     window.onkeydown = function(e) {
-      if (e.key == 'Shift') shift = true;
+      if (e.key == 'Shift' || e.key == 'VolumeDown') shift = true;
       if (e.code == 'Space') arr = [];
     }
     
     window.onkeyup = function(e) {
-      if (e.key == 'Shift') shift = false;
+      if (e.key == 'Shift' || e.key == 'VolumeDown') shift = false;
     }
 
     function run(res) {
