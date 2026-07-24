@@ -43,7 +43,7 @@ body {
 }
 
 .navbar .nav_ul .nav_logo {
-    font-family: "Italianno";
+    font-family: "poppins", "Italianno", "consolas";
     letter-spacing: 1px;
     position: relative;
     margin-right: auto;
