@@ -184,6 +184,29 @@
       letter-spacing: 3px;
       user-select: none;
     }
+
+    @media (max-width: 700px) {
+
+    body .go-back-link {
+        width: 20px;
+        height: 20px;
+        left: 0px;
+        border-radius: 0;
+        border-bottom-right-radius: 50%;
+        transform: rotate(0);
+        z-index: 999;
+        top: 0px;
+        transform: translateX(0);
+    }
+
+    body .go-back-link:is(:hover, :focus-visible) {
+        top: 5px;
+        left: 5px;
+        transform: scale(1.1);
+    }
+
+}
+
   </style>
 </head>
 
