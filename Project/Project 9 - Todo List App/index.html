@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List APP | Mega Project</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "arial";
+      }
+
+      body {
+        color: #fff;
+        min-height: 100dvh;
+        display: grid;
+        place-items: center;
+      }
+
+      .container {
+        width: 400px;
+        height: 600px;
+        border: 1px solid grey;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        background-color: #3467df;
+        border-radius: 10px;
+        padding: 10px;
+      }
+
+      .container .heading {
+        padding: 10px 10px;
+        border-bottom: 1px solid white;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+      }
+
+      .heading p {
+        font-size: 0.55rem;
+        padding-left: 3px;
+        line-height: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      .items {
+        margin-block-start: 10px;
+        padding: 10px;
+        background-color: #2b5bcc;
+        border-radius: 4px;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        height: calc(600px - 200px);
+        overflow-y: auto;
+      }
+
+      .items .item {
+        padding: 10px;
+        box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+        background-color: #fff;
+        color: #3467df;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        user-select: none;
+      }
+
+      .addTodoBox {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-block: 10px;
+        gap: 5px;
+        padding: 10px;
+      }
+
+      .addTodoBox input {
+        width: 100%;
+        height: 15px;
+        outline: none;
+        border: none;
+        background-color: #fff;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        font-size: 1rem;
+        padding: 10px;
+        color: #3467df;
+      }
+
+      .addTodoBox input::placeholder {
+        color: #3467df;
+      }
+
+      .btns {
+        display: flex;
+        gap: 10px;
+        border-left: 1px solid #3467df;
+        padding-left: 10px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-self: center;
+      }
+
+      .btns span,
+      .btn {
+        cursor: pointer;
+        border: 1px solid #3467df;
+        font-weight: 700;
+        background-color: #fff;
+        color: #3467df;
+        width: 20px;
+        border-radius: 50%;
+        height: 20px;
+        font-size: 0.7rem;
+        display: flex block;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .btn:hover,
+      .cut:hover {
+        transform: scale(0.9);
+      }
+
+      .btn:active {
+        border-color: #fff;
+        background-color: #3467df;
+        color: #fff;
+      }
+
+      .addTodoBox button {
+        width: 50px;
+        height: 40px;
+        font-size: 2rem;
+      }
+
+      .footer {
+        margin-block-start: 10px;
+        text-align: center;
+        font-size: .7rem;
+        letter-spacing: 3px;
+        user-select: none;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- #HEADER -->
+      <div class="heading">
+        <h1>Todo List App</h1>
+        <p>Add Remove update Todo Item</p>
+      </div>
+
+      <div class="addTodoBox">
+        <input
+          type="text"
+          id="addTodoInput"
+          placeholder="Add New Todo From Here"
+        />
+        <button class="btn" id="btn">+</button>
+      </div>
+
+      <ul class="items" id="items">
+        
+        
+
+      </ul>
+
+      <footer class="footer">
+        &copy; Copyright By &hearts; Sir Hassan Raza
+      </footer>
+    </div>
+  </body>
+
+  <script>
+    const inputTodo = document.getElementById("addTodoInput");
+    const addBtn = document.getElementById("btn");
+    const cutBtn = document.querySelectorAll(".cut");
+
+    const list = document.getElementById("items");
+
+    // Add Todo Item
+
+    addBtn.addEventListener("click", () => {
+      if (inputTodo.value != "") {
+        const li = document.createElement("li");
+        li.setAttribute("class", "item");
+        li.innerHTML = `
+        ${inputTodo.value} 
+          <div class="btns">
+          <span class="cut" id="cut">X</span>
+          </div>`;
+        list.appendChild(li);
+        inputTodo.value = "";
+      }
+    });
+
+    // Remove Todo Item
+
+    // Array.from(cut).forEach( (liElement)=>{
+    //   liElement.addEventListener('click', (e)=>{
+    //     console.log(liElement);
+    //       e.target.parentNode.parentNode.remove()
+    //   })
+    // })
+
+    list.addEventListener("click", (e) => {
+      if (e.target.id == "cut") {
+        e.target.parentNode.parentNode.remove();
+      }
+    });
+  </script>
+</html>
